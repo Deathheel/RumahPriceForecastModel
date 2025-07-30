@@ -28,7 +28,7 @@ with col2:
     # Buat tampilan interaktif
     st.write("Harga rumah impian anda diperkirakan sekitar IDR {:,.0f}".format(prediksi[0]))
 
-    st.image(path, caption="Rumah dengan %d kamar tidur, %d kamar mandi, dan %d garasi. (Gambar hanya mockup yang dibuat oleh GEMINI AI)"%(slider_kt, slider_km, slider_grs), width=700)
+    st.image(path, caption="Rumah dengan %d kamar tidur, %d kamar mandi, dan %d garasi. (Gambar hanya mockup yang dibuat oleh GEMINI AI)"%(slider_kt, slider_km, slider_grs), width=600)
 
     
 with col3:
