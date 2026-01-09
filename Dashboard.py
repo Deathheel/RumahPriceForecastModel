@@ -69,12 +69,11 @@ if st.button("Predict Price"):
     lower_bound = max(0, final_predicted_price - (range_factor * rmse_sgd_value))
     upper_bound = final_predicted_price + (range_factor * rmse_sgd_value)
 
-    
-st.subheader("Prediction Result:")
-st.success(f"*Predicted Price: IDR {final_predicted_price:,.0f}*")
-st.write(f"Heuristic Price Range (± {range_factor}*RMSE): [IDR {lower_bound:,.0f} - IDR {upper_bound:,.0f}]")
-st.info(f"Note: This range is an approximate measure of uncertainty based on the overall model's RMSE (IDR {rmse_sgd_value:,.0f}).")
-st.image(path, caption="Rumah dengan %d kamar tidur, %d kamar mandi, dan %d garasi. (Gambar hanya mockup yang dibuat oleh GEMINI AI)"%(kt, km, gr), width=700)
+    st.subheader("Prediction Result:")
+    st.success(f"*Predicted Price: IDR {final_predicted_price:,.0f}*")
+    st.write(f"Heuristic Price Range (± {range_factor}*RMSE): [IDR {lower_bound:,.0f} - IDR {upper_bound:,.0f}]")
+    st.info(f"Note: This range is an approximate measure of uncertainty based on the overall model's RMSE (IDR {rmse_sgd_value:,.0f}).")
+    st.image(path, caption="Rumah dengan %d kamar tidur, %d kamar mandi, dan %d garasi. (Gambar hanya mockup yang dibuat oleh GEMINI AI)"%(kt, km, gr), width=700)
 
 
 
