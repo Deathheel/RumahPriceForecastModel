@@ -16,15 +16,15 @@ except Exception as e:
 
 # --- Define the RMSE for heuristic range (SGDRegressor) ---
 # This value is hardcoded from the notebook's last execution of rmse_sgd
-rmse_sgd_value = 898768578.1636932
+rmse_sgd_value = 890748835
 
 # --- Feature Ranges (derived from HouseDF after preprocessing in the notebook) ---
 # These values ensure the sliders reflect the data the model was trained on
 bedroom_count_min, bedroom_count_max, bedroom_count_mean = 3.0, 5.0, 4.0
 bathroom_count_min, bathroom_count_max, bathroom_count_mean = 1.0, 4.0, 2.6 # Adjusted mean for better slider default
 carport_count_min, carport_count_max, carport_count_mean = 0.0, 2.0, 1.0
-land_area_min, land_area_max, land_area_mean = 80.0, 463.5, 224.2 # Adjusted mean for better slider default
-building_area_min, building_area_max, building_area_mean = 25.0, 300.0, 188.7 # Adjusted mean for better slider default
+land_area_min, land_area_max, land_area_mean = 55.0, 463.5, 224.2 # Adjusted mean for better slider default
+building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # Adjusted mean for better slider default
 
 # --- Streamlit App Layout ---
 st.set_page_config(page_title="House Price Predictor", layout="centered")
