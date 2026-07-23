@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import base64
 # --- Load the trained SGDRegressor model ---
 try:
     # Assuming 'RumahBandung.pkl' is in the same directory as the Streamlit app
