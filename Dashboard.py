@@ -28,27 +28,28 @@ land_area_min, land_area_max, land_area_mean = 55.0, 463.5, 224.2 # Adjusted mea
 building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # Adjusted mean for better slider default
 
 # --- Streamlit App Layout ---
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
+def set_bg_local(main_bg):
+    '''
+    Function to set a local image as the background
+    '''
+    with open(main_bg, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode()
     
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/png;base64,{encoded_string}");
+            background-attachment: fixed;
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-set_png_as_page_bg('background.png')
+# Pass the path to your local image
+set_bg_local('background.png')
 st.set_page_config(page_title="House Price Predictor", layout="centered")
 st.title("House Price Prediction Widget")
 st.write("Adjust the sliders to predict the house price using the trained SGDRegressor model.")
