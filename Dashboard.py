@@ -28,23 +28,23 @@ land_area_min, land_area_max, land_area_mean = 55.0, 463.5, 224.2 # Adjusted mea
 building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # Adjusted mean for better slider default
 
 # --- Streamlit App Layout ---
-'''def set_bg_local(main_bg):
+#def set_bg_local(main_bg):
     #Function to set a local image as the background
-    with open(main_bg, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read()).decode()
+    #with open(main_bg, "rb") as image_file:
+        #encoded_string = base64.b64encode(image_file.read()).decode()
     
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/png;base64,{encoded_string}");
-            background-attachment: fixed;
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )'''
+    #st.markdown(
+        #f"""
+        #<style>
+        #.stApp {{
+            #background-image: url("data:image/png;base64,{encoded_string}");
+            #background-attachment: fixed;
+            #background-size: cover;
+        #}}
+        #</style>
+        #""",
+        #unsafe_allow_html=True
+    )
 
 # Pass the path to your local image
 #set_bg_local('background.png')
