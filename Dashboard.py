@@ -28,7 +28,7 @@ land_area_min, land_area_max, land_area_mean = 55.0, 463.5, 224.2 # Adjusted mea
 building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # Adjusted mean for better slider default
 
 # --- Streamlit App Layout ---
-def set_bg_local(main_bg):
+'''def set_bg_local(main_bg):
     '''
     Function to set a local image as the background
     '''
@@ -46,16 +46,16 @@ def set_bg_local(main_bg):
         </style>
         """,
         unsafe_allow_html=True
-    )
+    )'''
 
 # Pass the path to your local image
-set_bg_local('background.png')
-st.set_page_config(page_title="House Price Predictor", layout="centered")
-st.title("House Price Prediction Widget")
-st.write("Adjust the sliders to predict the house price using the trained SGDRegressor model.")
-st.info("This model is specifically trained for the Bojongloa Kidul, Bandung area.")
+#set_bg_local('background.png')
+#st.set_page_config(page_title="House Price Predictor", layout="centered")
+#st.title("House Price Prediction Widget")
+#st.write("Adjust the sliders to predict the house price using the trained SGDRegressor model.")
+#st.info("This model is specifically trained for the Bojongloa Kidul, Bandung area.")
 
-st.header("Input House Features")
+#st.header("Input House Features")
 
 # Create Streamlit sliders for each feature
 # The order below matches the input order expected by the model:
