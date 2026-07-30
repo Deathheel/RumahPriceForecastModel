@@ -44,7 +44,7 @@ building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # 
         #</style>
         #""",
         #unsafe_allow_html=True
-    )
+    #)
 
 # Pass the path to your local image
 #set_bg_local('background.png')
