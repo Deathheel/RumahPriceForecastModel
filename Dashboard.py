@@ -30,7 +30,7 @@ building_area_min, building_area_max, building_area_mean = 40.0, 300.0, 188.7 # 
 # --- Streamlit App Layout ---
 '''def set_bg_local(main_bg):
     '''
-    Function to set a local image as the background
+    #Function to set a local image as the background
     '''
     with open(main_bg, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode()
